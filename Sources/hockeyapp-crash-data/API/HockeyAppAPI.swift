@@ -81,12 +81,10 @@ class HockeyAppAPI {
                 let dispatchGroup2 = DispatchGroup()
                 for id in crashGroupIDs[..<totalCrashGroups] {
                     dispatchGroup2.enter()
-                    self.crashGroup(reasonId: id) { crashGroupsResponse in
-                        guard let reason = crashGroupsResponse?.crashReason, let crashes = crashGroupsResponse?.crashes else {
-                            dispatchGroup2.leave()
-                            return
+                    self.crashGroup(reasonId: id) { crashGroup in
+                        if let group = crashGroup {
+                            crashGroups.append(group)
                         }
-                        crashGroups.append(CrashGroup(crashReason: reason, crashes: crashes))
                         dispatchGroup2.leave()
                     }
                 }
@@ -130,9 +128,44 @@ class HockeyAppAPI {
         }
     }
     
-    private func crashGroup(reasonId: Int, completion: @escaping (CrashGroupResponse?) -> Void) {
+    private func crashGroup(reasonId: Int, completion: @escaping (CrashGroup?) -> Void) {
+        // fetch 1st page of a group's crashes
+        crashGroup(reasonId: reasonId, page: 1) { [weak self] response in
+            guard let response = response else {
+                completion(nil)
+                return
+            }
+            
+            var crashes: [CrashGroupResponse.Crash] = []
+            
+            // add page 1 crashes
+            crashes.append(contentsOf: response.crashes)
+            
+            // fetch remaming crash pages
+            let dispatchGroup = DispatchGroup()
+            for page in 2..<(response.totalPages+1) {
+                dispatchGroup.enter()
+                self?.crashGroup(reasonId: reasonId, page: page) { response2 in
+                    guard let response2 = response2 else {
+                        dispatchGroup.leave()
+                        return
+                    }
+                    // add remaining crash pages
+                    crashes.append(contentsOf: response2.crashes)
+                    dispatchGroup.leave()
+                }
+            }
+            
+            // done
+            dispatchGroup.notify(queue: .main) {
+                completion(CrashGroup(crashReason: response.crashReason, crashes: crashes))
+            }
+        }
+    }
+    
+    private func crashGroup(reasonId: Int, page: Int, completion: @escaping (CrashGroupResponse?) -> Void) {
         // GET /api/2/apps/APP_ID/crash_reasons/REASON_ID
-        guard let url = URL(string: "\(baseURLString)/api/2/apps/\(appID)/crash_reasons/\(reasonId)") else { return }
+        guard let url = URL(string: "\(baseURLString)/api/2/apps/\(appID)/crash_reasons/\(reasonId)?page=\(page)&per_page=100") else { return }
         
         var request = URLRequest(url: url)
         request.setValue(token, forHTTPHeaderField: "X-HockeyAppToken")
