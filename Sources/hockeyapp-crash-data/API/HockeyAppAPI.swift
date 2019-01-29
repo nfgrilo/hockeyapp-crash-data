@@ -18,7 +18,7 @@ class HockeyAppAPI {
     // >> So, let's use 50 per minute to be safe.
     private var rateLimitPerMinute: Int = 50
     private lazy var throttler: Throttler = {
-        return Throttler(seconds: 60/rateLimitPerMinute)
+        return Throttler(seconds: 60 / rateLimitPerMinute)
     }()
     
     lazy var session: URLSession = {
@@ -50,7 +50,7 @@ class HockeyAppAPI {
             }
             let totalPages = self.isDebug ? 2 : response.totalPages
             if totalPages > 1 {
-                print("Fetching all \(totalPages) crash reasons pages...")
+                print("Fetching all \(totalPages) crash groups pages...")
             }
 
             // fetch all crash reason IDs
@@ -71,10 +71,10 @@ class HockeyAppAPI {
             
             // done fetching all crash reason IDs
             dispatchGroup.notify(queue: .main) {
-                print("Finished fetching crash reasons.")
+                print("Finished fetching crash groups.")
                 
                 let totalCrashGroups = self.isDebug ? 2 : crashGroupIDs.count
-                print("Fetching all \(totalCrashGroups) individual crash reasons...")
+                print("Fetching all \(totalCrashGroups) individual crash groups...")
                 
                 // -> fetch each crash reason
                 var crashGroups: [CrashGroup] = []
@@ -107,7 +107,7 @@ class HockeyAppAPI {
         request.setValue(token, forHTTPHeaderField: "X-HockeyAppToken")
         
         throttler.throttle { [weak self] in
-            print("Fetching crash reasons for page \(page)...")
+            print("Fetching crash groups for page \(page)...")
             let task = self?.session.dataTask(with: request) { (data, response, error) in
                 guard let dataResponse = data, error == nil else {
                     print(error?.localizedDescription ?? "Response Error")
@@ -171,7 +171,7 @@ class HockeyAppAPI {
         request.setValue(token, forHTTPHeaderField: "X-HockeyAppToken")
         
         throttler.throttle { [weak self] in
-            print("Fetching crashes for crash reason \(reasonId)...")
+            print("Fetching crashes for crash group \(reasonId)...")
             let task = self?.session.dataTask(with: request) { (data, response, error) in
                 guard let dataResponse = data, error == nil else {
                     print(error?.localizedDescription ?? "Response Error")

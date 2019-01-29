@@ -17,7 +17,12 @@ public final class HockeyAppCrashDataFetcher {
     
     // MARK: Crash Data
     
-    func fetchCrashDataPerUser(exportTo filename: String, completion: @escaping () -> Void) {
+    enum ExportType {
+        case userCrashes
+        case userCrashGroupStats
+    }
+    
+    func fetchCrashDataPerUser(export exportType: ExportType, to filename: String, completion: @escaping () -> Void) {
         api.listAllCrashReasons() { crashGroups in
             var stats: [String: UserStats] = [:]
             
@@ -55,36 +60,66 @@ public final class HockeyAppCrashDataFetcher {
             
             // present results
             print("##############################################")
-            print("Crash Groups: count=\(crashGroups.count), total crashes=\(crashGroups.reduce(0, { $0 + $1.crashes.count }))")
-            print("# Crash groups = \(crashGroups.count)")
-            print("# Crashes = \(crashGroups.reduce(0, { $0 + $1.crashes.count }))")
-            print("# Users = \(stats.keys.count)")
+            print("Total Crash Groups = \(crashGroups.count)")
+            print("Total Crashes = \(crashGroups.reduce(0, { $0 + $1.crashes.count }))")
+            print("Total Users = \(stats.keys.count)")
             print("##############################################")
             
             // export to file
             if !filename.isEmpty {
-                // prepare string
-                var csv = "UserID,CrashReasonID,ReasonCrashes,TotalCrashes\r\n"
-                stats.values.forEach { userStats in
-                    userStats.crashesPerReason.forEach { reasonID, reasonCrashCount in
-                        csv += "\"\(userStats.user)\",\(reasonID),\(reasonCrashCount),\(userStats.totalCrashes)\r\n"
-                    }
+                switch exportType {
+                case .userCrashes:
+                    self.exportUserCrashesToCSV(filename, stats: stats)
+                case .userCrashGroupStats:
+                    self.exportUserCrashGroupStatsToCSV(filename, stats: stats)
                 }
                 
-                let fileURL = URL(fileURLWithPath: filename)
-                do {
-                    try csv.write(to: fileURL, atomically: false, encoding: .utf8)
-                }
-                catch {
-                    print("Failed to export data to \(filename): \(error)")
-                }
                 print("Data was exported to \(filename)")
             } else {
                 print("No file argument was specified => data was now exported")
             }
+            
             print("##############################################")
             
             completion()
+        }
+    }
+    
+    private func exportUserCrashGroupStatsToCSV(_ filename: String, stats: [String: UserStats]) {
+        // prepare string
+        var csv = "\"User ID\",\"Crash Reason ID\",\"Total Reason Crashes\"\r\n"
+        stats.values.forEach { userStats in
+            userStats.crashesPerReason.forEach { reasonID, reasonCrashCount in
+                csv += "\"\(userStats.user)\",\(reasonID),\(reasonCrashCount)\r\n"
+            }
+        }
+        
+        // save
+        let fileURL = URL(fileURLWithPath: filename)
+        do {
+            try csv.write(to: fileURL, atomically: false, encoding: .utf8)
+            print("Data was exported to \(filename)")
+        } catch {
+            print("Failed to export data to \(filename): \(error)")
+        }
+    }
+    
+    private func exportUserCrashesToCSV(_ filename: String, stats: [String: UserStats]) {
+        // prepare string
+        var csv = "\"User ID\",\"Total Crashes\"\r\n"
+        stats.values.forEach { userStats in
+            userStats.crashesPerReason.forEach { reasonID, reasonCrashCount in
+                csv += "\"\(userStats.user)\",\(userStats.totalCrashes)\r\n"
+            }
+        }
+        
+        // save
+        let fileURL = URL(fileURLWithPath: filename)
+        do {
+            try csv.write(to: fileURL, atomically: false, encoding: .utf8)
+            print("Data was exported to \(filename)")
+        } catch {
+            print("Failed to export data to \(filename): \(error)")
         }
     }
     
