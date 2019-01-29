@@ -11,11 +11,12 @@ class HockeyAppAPI {
     private var token: String
     private var appID: String
     private var baseURLString = "https://rink.hockeyapp.net"
-    private var isDebug: Bool = true
+    private var isDebug: Bool = false
     
     // Rate Limiting:
     // > We limit requests to 60 per minute and App ID. If the limit is exceeded, please throttle your scripts.
-    private var rateLimitPerMinute: Int = 60
+    // >> So, let's use 50 per minute to be safe.
+    private var rateLimitPerMinute: Int = 50
     private lazy var throttler: Throttler = {
         return Throttler(seconds: 60/rateLimitPerMinute)
     }()
