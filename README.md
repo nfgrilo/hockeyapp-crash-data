@@ -1,5 +1,5 @@
 # hockeyapp-crash-data
-Get some crash stats from HockeyApp, grouped by user.
+Get some crash stats from HockeyApp, grouped by user, using the [Crash API](https://support.hockeyapp.net/kb/api/api-crashes).
 
 
 # Debug Build
