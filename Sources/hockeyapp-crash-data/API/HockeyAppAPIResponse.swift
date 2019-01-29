@@ -39,24 +39,7 @@ struct CrashGroupsResponse: Codable {
 
 
 struct CrashGroupResponse: Codable {
-    struct CrashReason: Codable {
-        let id: Int
-        let appId: Int
-        let appVersionId: Int
-        let numberOfCrashes: Int
-        let createdAt: Date
-        let updatedAt: Date
-        let lastCrashAt: Date
-        let bundleShortVersion: String?
-        let bundleVersion: String?
-        let status: Int
-        let fixed: Bool?
-        let file: String?
-        let `class`: String?
-        let method: String?
-        let line: String?
-        let reason: String?
-    }
+    typealias CrashReason = CrashGroupsResponse.CrashReason
     
     struct Crash: Codable {
         let id: Int
