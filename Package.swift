@@ -8,13 +8,16 @@ let package = Package(
     dependencies: [
         // Commander: Compose beautiful command line interfaces in Swift - https://github.com/kylef/Commander
         .package(url: "https://github.com/kylef/Commander.git", from: "0.8.0"),
+        
+        // Jobs - https://github.com/BrettRToomey/Jobs
+        .package(url: "https://github.com/BrettRToomey/Jobs.git", from: "1.1.1"),
     ],
     targets: [
         // Targets are the basic building blocks of a package. A target can define a module or a test suite.
         // Targets can depend on other targets in this package, and on products in packages which this package depends on.
         .target(
             name: "hockeyapp-crash-data",
-            dependencies: ["Commander"]),
+            dependencies: ["Commander", "Jobs"]),
         .testTarget(
             name: "hockeyapp-crash-dataTests",
             dependencies: ["hockeyapp-crash-data"]),
