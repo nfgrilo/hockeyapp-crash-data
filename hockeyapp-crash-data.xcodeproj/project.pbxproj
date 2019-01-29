@@ -1,0 +1,698 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		"hockeyapp-crash-data::hockeyapp-crash-dataPackageTests::ProductTarget" /* hockeyapp-crash-dataPackageTests */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = OBJ_68 /* Build configuration list for PBXAggregateTarget "hockeyapp-crash-dataPackageTests" */;
+			buildPhases = (
+			);
+			dependencies = (
+				OBJ_71 /* PBXTargetDependency */,
+			);
+			name = "hockeyapp-crash-dataPackageTests";
+			productName = "hockeyapp-crash-dataPackageTests";
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		28533AAA220073AF0046F93A /* HockeyAppCrashDataFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28533AA8220072990046F93A /* HockeyAppCrashDataFetcher.swift */; };
+		OBJ_36 /* ArgumentConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_17 /* ArgumentConvertible.swift */; };
+		OBJ_37 /* ArgumentDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_18 /* ArgumentDescription.swift */; };
+		OBJ_38 /* ArgumentParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_19 /* ArgumentParser.swift */; };
+		OBJ_39 /* Command.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_20 /* Command.swift */; };
+		OBJ_40 /* CommandRunner.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_21 /* CommandRunner.swift */; };
+		OBJ_41 /* CommandType.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_22 /* CommandType.swift */; };
+		OBJ_42 /* Commands.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_23 /* Commands.swift */; };
+		OBJ_43 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_24 /* Error.swift */; };
+		OBJ_44 /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_25 /* Group.swift */; };
+		OBJ_51 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_26 /* Package.swift */; };
+		OBJ_57 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_9 /* main.swift */; };
+		OBJ_59 /* Commander.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "Commander::Commander::Product" /* Commander.framework */; };
+		OBJ_66 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_6 /* Package.swift */; };
+		OBJ_77 /* XCTestManifests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_12 /* XCTestManifests.swift */; };
+		OBJ_78 /* hockeyapp_crash_dataTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_13 /* hockeyapp_crash_dataTests.swift */; };
+		OBJ_80 /* Commander.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "Commander::Commander::Product" /* Commander.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		28533AA422006CD30046F93A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "Commander::Commander";
+			remoteInfo = Commander;
+		};
+		28533AA522006CD30046F93A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "hockeyapp-crash-data::hockeyapp-crash-data";
+			remoteInfo = "hockeyapp-crash-data";
+		};
+		28533AA622006CD30046F93A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "Commander::Commander";
+			remoteInfo = Commander;
+		};
+		28533AA722006CD50046F93A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "hockeyapp-crash-data::hockeyapp-crash-dataTests";
+			remoteInfo = "hockeyapp-crash-dataTests";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		28533AA8220072990046F93A /* HockeyAppCrashDataFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HockeyAppCrashDataFetcher.swift; sourceTree = "<group>"; };
+		"Commander::Commander::Product" /* Commander.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Commander.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		OBJ_12 /* XCTestManifests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCTestManifests.swift; sourceTree = "<group>"; };
+		OBJ_13 /* hockeyapp_crash_dataTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = hockeyapp_crash_dataTests.swift; sourceTree = "<group>"; };
+		OBJ_17 /* ArgumentConvertible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArgumentConvertible.swift; sourceTree = "<group>"; };
+		OBJ_18 /* ArgumentDescription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArgumentDescription.swift; sourceTree = "<group>"; };
+		OBJ_19 /* ArgumentParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArgumentParser.swift; sourceTree = "<group>"; };
+		OBJ_20 /* Command.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Command.swift; sourceTree = "<group>"; };
+		OBJ_21 /* CommandRunner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommandRunner.swift; sourceTree = "<group>"; };
+		OBJ_22 /* CommandType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommandType.swift; sourceTree = "<group>"; };
+		OBJ_23 /* Commands.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Commands.swift; sourceTree = "<group>"; };
+		OBJ_24 /* Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
+		OBJ_25 /* Group.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Group.swift; sourceTree = "<group>"; };
+		OBJ_26 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; name = Package.swift; path = "/Users/nfgrilo/Projects/sherpany/hockeyapp-crash-data/.build/checkouts/Commander.git-502635241871816521/Package.swift"; sourceTree = "<group>"; };
+		OBJ_6 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
+		OBJ_9 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		"hockeyapp-crash-data::hockeyapp-crash-data::Product" /* hockeyapp-crash-data */ = {isa = PBXFileReference; lastKnownFileType = text; path = "hockeyapp-crash-data"; sourceTree = BUILT_PRODUCTS_DIR; };
+		"hockeyapp-crash-data::hockeyapp-crash-dataTests::Product" /* hockeyapp_crash_dataTests.xctest */ = {isa = PBXFileReference; lastKnownFileType = file; name = hockeyapp_crash_dataTests.xctest; path = "hockeyapp-crash-dataTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		OBJ_45 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_58 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_59 /* Commander.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_79 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_80 /* Commander.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		OBJ_10 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_11 /* hockeyapp-crash-dataTests */,
+			);
+			name = Tests;
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_11 /* hockeyapp-crash-dataTests */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_12 /* XCTestManifests.swift */,
+				OBJ_13 /* hockeyapp_crash_dataTests.swift */,
+			);
+			name = "hockeyapp-crash-dataTests";
+			path = "Tests/hockeyapp-crash-dataTests";
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_14 /* Dependencies */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_15 /* Commander 0.8.0 */,
+			);
+			name = Dependencies;
+			sourceTree = "<group>";
+		};
+		OBJ_15 /* Commander 0.8.0 */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_16 /* Commander */,
+				OBJ_26 /* Package.swift */,
+			);
+			name = "Commander 0.8.0";
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_16 /* Commander */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_17 /* ArgumentConvertible.swift */,
+				OBJ_18 /* ArgumentDescription.swift */,
+				OBJ_19 /* ArgumentParser.swift */,
+				OBJ_20 /* Command.swift */,
+				OBJ_21 /* CommandRunner.swift */,
+				OBJ_22 /* CommandType.swift */,
+				OBJ_23 /* Commands.swift */,
+				OBJ_24 /* Error.swift */,
+				OBJ_25 /* Group.swift */,
+			);
+			name = Commander;
+			path = ".build/checkouts/Commander.git-502635241871816521/Sources/Commander";
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_27 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				"hockeyapp-crash-data::hockeyapp-crash-dataTests::Product" /* hockeyapp_crash_dataTests.xctest */,
+				"hockeyapp-crash-data::hockeyapp-crash-data::Product" /* hockeyapp-crash-data */,
+				"Commander::Commander::Product" /* Commander.framework */,
+			);
+			name = Products;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		OBJ_5 /*  */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_6 /* Package.swift */,
+				OBJ_7 /* Sources */,
+				OBJ_10 /* Tests */,
+				OBJ_14 /* Dependencies */,
+				OBJ_27 /* Products */,
+			);
+			name = "";
+			sourceTree = "<group>";
+		};
+		OBJ_7 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_8 /* hockeyapp-crash-data */,
+			);
+			name = Sources;
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_8 /* hockeyapp-crash-data */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_9 /* main.swift */,
+				28533AA8220072990046F93A /* HockeyAppCrashDataFetcher.swift */,
+			);
+			name = "hockeyapp-crash-data";
+			path = "Sources/hockeyapp-crash-data";
+			sourceTree = SOURCE_ROOT;
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		"Commander::Commander" /* Commander */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = OBJ_32 /* Build configuration list for PBXNativeTarget "Commander" */;
+			buildPhases = (
+				OBJ_35 /* Sources */,
+				OBJ_45 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Commander;
+			productName = Commander;
+			productReference = "Commander::Commander::Product" /* Commander.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		"Commander::SwiftPMPackageDescription" /* CommanderPackageDescription */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = OBJ_47 /* Build configuration list for PBXNativeTarget "CommanderPackageDescription" */;
+			buildPhases = (
+				OBJ_50 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CommanderPackageDescription;
+			productName = CommanderPackageDescription;
+			productType = "com.apple.product-type.framework";
+		};
+		"hockeyapp-crash-data::SwiftPMPackageDescription" /* hockeyapp-crash-dataPackageDescription */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = OBJ_62 /* Build configuration list for PBXNativeTarget "hockeyapp-crash-dataPackageDescription" */;
+			buildPhases = (
+				OBJ_65 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "hockeyapp-crash-dataPackageDescription";
+			productName = "hockeyapp-crash-dataPackageDescription";
+			productType = "com.apple.product-type.framework";
+		};
+		"hockeyapp-crash-data::hockeyapp-crash-data" /* hockeyapp-crash-data */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = OBJ_53 /* Build configuration list for PBXNativeTarget "hockeyapp-crash-data" */;
+			buildPhases = (
+				OBJ_56 /* Sources */,
+				OBJ_58 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				OBJ_60 /* PBXTargetDependency */,
+			);
+			name = "hockeyapp-crash-data";
+			productName = hockeyapp_crash_data;
+			productReference = "hockeyapp-crash-data::hockeyapp-crash-data::Product" /* hockeyapp-crash-data */;
+			productType = "com.apple.product-type.tool";
+		};
+		"hockeyapp-crash-data::hockeyapp-crash-dataTests" /* hockeyapp-crash-dataTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = OBJ_73 /* Build configuration list for PBXNativeTarget "hockeyapp-crash-dataTests" */;
+			buildPhases = (
+				OBJ_76 /* Sources */,
+				OBJ_79 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				OBJ_81 /* PBXTargetDependency */,
+				OBJ_82 /* PBXTargetDependency */,
+			);
+			name = "hockeyapp-crash-dataTests";
+			productName = hockeyapp_crash_dataTests;
+			productReference = "hockeyapp-crash-data::hockeyapp-crash-dataTests::Product" /* hockeyapp_crash_dataTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		OBJ_1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 9999;
+			};
+			buildConfigurationList = OBJ_2 /* Build configuration list for PBXProject "hockeyapp-crash-data" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = OBJ_5 /*  */;
+			productRefGroup = OBJ_27 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				"Commander::Commander" /* Commander */,
+				"Commander::SwiftPMPackageDescription" /* CommanderPackageDescription */,
+				"hockeyapp-crash-data::hockeyapp-crash-data" /* hockeyapp-crash-data */,
+				"hockeyapp-crash-data::SwiftPMPackageDescription" /* hockeyapp-crash-dataPackageDescription */,
+				"hockeyapp-crash-data::hockeyapp-crash-dataPackageTests::ProductTarget" /* hockeyapp-crash-dataPackageTests */,
+				"hockeyapp-crash-data::hockeyapp-crash-dataTests" /* hockeyapp-crash-dataTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		OBJ_35 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_36 /* ArgumentConvertible.swift in Sources */,
+				OBJ_37 /* ArgumentDescription.swift in Sources */,
+				OBJ_38 /* ArgumentParser.swift in Sources */,
+				OBJ_39 /* Command.swift in Sources */,
+				OBJ_40 /* CommandRunner.swift in Sources */,
+				OBJ_41 /* CommandType.swift in Sources */,
+				OBJ_42 /* Commands.swift in Sources */,
+				OBJ_43 /* Error.swift in Sources */,
+				OBJ_44 /* Group.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_50 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_51 /* Package.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_56 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				28533AAA220073AF0046F93A /* HockeyAppCrashDataFetcher.swift in Sources */,
+				OBJ_57 /* main.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_65 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_66 /* Package.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_76 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_77 /* XCTestManifests.swift in Sources */,
+				OBJ_78 /* hockeyapp_crash_dataTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		OBJ_60 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "Commander::Commander" /* Commander */;
+			targetProxy = 28533AA422006CD30046F93A /* PBXContainerItemProxy */;
+		};
+		OBJ_71 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "hockeyapp-crash-data::hockeyapp-crash-dataTests" /* hockeyapp-crash-dataTests */;
+			targetProxy = 28533AA722006CD50046F93A /* PBXContainerItemProxy */;
+		};
+		OBJ_81 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "hockeyapp-crash-data::hockeyapp-crash-data" /* hockeyapp-crash-data */;
+			targetProxy = 28533AA522006CD30046F93A /* PBXContainerItemProxy */;
+		};
+		OBJ_82 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "Commander::Commander" /* Commander */;
+			targetProxy = 28533AA622006CD30046F93A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		OBJ_3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_NS_ASSERTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_SWIFT_FLAGS = "-DXcode";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SUPPORTED_PLATFORMS = "macosx iphoneos iphonesimulator appletvos appletvsimulator watchos watchsimulator";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "SWIFT_PACKAGE DEBUG";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				USE_HEADERMAP = NO;
+			};
+			name = Debug;
+		};
+		OBJ_33 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = "hockeyapp-crash-data.xcodeproj/Commander_Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = Commander;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
+				SWIFT_VERSION = 4.0;
+				TARGET_NAME = Commander;
+			};
+			name = Debug;
+		};
+		OBJ_34 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = "hockeyapp-crash-data.xcodeproj/Commander_Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = Commander;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
+				SWIFT_VERSION = 4.0;
+				TARGET_NAME = Commander;
+			};
+			name = Release;
+		};
+		OBJ_4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_OPTIMIZATION_LEVEL = s;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				OTHER_SWIFT_FLAGS = "-DXcode";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SUPPORTED_PLATFORMS = "macosx iphoneos iphonesimulator appletvos appletvsimulator watchos watchsimulator";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = SWIFT_PACKAGE;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				USE_HEADERMAP = NO;
+			};
+			name = Release;
+		};
+		OBJ_48 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				LD = /usr/bin/true;
+				OTHER_SWIFT_FLAGS = "-swift-version 4 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/4 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Debug;
+		};
+		OBJ_49 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				LD = /usr/bin/true;
+				OTHER_SWIFT_FLAGS = "-swift-version 4 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/4 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Release;
+		};
+		OBJ_54 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = "hockeyapp-crash-data.xcodeproj/hockeyapp_crash_data_Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx @executable_path";
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
+				SWIFT_FORCE_DYNAMIC_LINK_STDLIB = YES;
+				SWIFT_FORCE_STATIC_LINK_STDLIB = NO;
+				SWIFT_VERSION = 4.2;
+				TARGET_NAME = "hockeyapp-crash-data";
+			};
+			name = Debug;
+		};
+		OBJ_55 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = "hockeyapp-crash-data.xcodeproj/hockeyapp_crash_data_Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx @executable_path";
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
+				SWIFT_FORCE_DYNAMIC_LINK_STDLIB = YES;
+				SWIFT_FORCE_STATIC_LINK_STDLIB = NO;
+				SWIFT_VERSION = 4.2;
+				TARGET_NAME = "hockeyapp-crash-data";
+			};
+			name = Release;
+		};
+		OBJ_63 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				LD = /usr/bin/true;
+				OTHER_SWIFT_FLAGS = "-swift-version 4.2 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/4_2 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk";
+				SWIFT_VERSION = 4.2;
+			};
+			name = Debug;
+		};
+		OBJ_64 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				LD = /usr/bin/true;
+				OTHER_SWIFT_FLAGS = "-swift-version 4.2 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/4_2 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk";
+				SWIFT_VERSION = 4.2;
+			};
+			name = Release;
+		};
+		OBJ_69 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Debug;
+		};
+		OBJ_70 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Release;
+		};
+		OBJ_74 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = "hockeyapp-crash-data.xcodeproj/hockeyapp_crash_dataTests_Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @loader_path/../Frameworks @loader_path/Frameworks";
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
+				SWIFT_VERSION = 4.2;
+				TARGET_NAME = "hockeyapp-crash-dataTests";
+			};
+			name = Debug;
+		};
+		OBJ_75 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = "hockeyapp-crash-data.xcodeproj/hockeyapp_crash_dataTests_Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @loader_path/../Frameworks @loader_path/Frameworks";
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
+				SWIFT_VERSION = 4.2;
+				TARGET_NAME = "hockeyapp-crash-dataTests";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		OBJ_2 /* Build configuration list for PBXProject "hockeyapp-crash-data" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_3 /* Debug */,
+				OBJ_4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		OBJ_32 /* Build configuration list for PBXNativeTarget "Commander" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_33 /* Debug */,
+				OBJ_34 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		OBJ_47 /* Build configuration list for PBXNativeTarget "CommanderPackageDescription" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_48 /* Debug */,
+				OBJ_49 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		OBJ_53 /* Build configuration list for PBXNativeTarget "hockeyapp-crash-data" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_54 /* Debug */,
+				OBJ_55 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		OBJ_62 /* Build configuration list for PBXNativeTarget "hockeyapp-crash-dataPackageDescription" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_63 /* Debug */,
+				OBJ_64 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		OBJ_68 /* Build configuration list for PBXAggregateTarget "hockeyapp-crash-dataPackageTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_69 /* Debug */,
+				OBJ_70 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		OBJ_73 /* Build configuration list for PBXNativeTarget "hockeyapp-crash-dataTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_74 /* Debug */,
+				OBJ_75 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = OBJ_1 /* Project object */;
+}
