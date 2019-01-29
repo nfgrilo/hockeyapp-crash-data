@@ -1,6 +1,9 @@
 # hockeyapp-crash-data
+
 Get some crash stats from HockeyApp, grouped by user, using the [Crash API](https://support.hockeyapp.net/kb/api/api-crashes).
 
+![Help](https://raw.githubusercontent.com/nfgrilo/hockeyapp-crash-data/master/Images/screenshot-1.png)
+![Commands Help](https://raw.githubusercontent.com/nfgrilo/hockeyapp-crash-data/master/Images/screenshot-2.png)
 
 # Release Build
 
