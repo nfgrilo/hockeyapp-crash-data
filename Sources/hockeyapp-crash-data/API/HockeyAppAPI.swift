@@ -103,7 +103,7 @@ class HockeyAppAPI {
     
     private func listCrashGroups(page: Int, completion: @escaping (CrashGroupsResponse?) -> Void) {
         // GET /api/2/apps/APP_ID/crash_reasons
-        guard let url = URL(string: "\(baseURLString)/api/2/apps/\(appID)/crash_reasons?page=\(page)") else { return }
+        guard let url = URL(string: "\(baseURLString)/api/2/apps/\(appID)/crash_reasons?page=\(page)&per_page=100") else { return }
         
         var request = URLRequest(url: url)
         request.setValue(token, forHTTPHeaderField: "X-HockeyAppToken")
