@@ -23,7 +23,6 @@
 /* Begin PBXBuildFile section */
 		28533ABB2200B4170046F93A /* UserStats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28533ABA2200B4170046F93A /* UserStats.swift */; };
 		28533ABE2200B4400046F93A /* CrashGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28533ABD2200B4400046F93A /* CrashGroup.swift */; };
-		28533AC12200C7BC0046F93A /* FileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28533AC02200C7BC0046F93A /* FileManager.swift */; };
 		OBJ_106 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_6 /* Package.swift */; };
 		OBJ_117 /* XCTestManifests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_17 /* XCTestManifests.swift */; };
 		OBJ_118 /* hockeyapp_crash_dataTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_18 /* hockeyapp_crash_dataTests.swift */; };
@@ -103,7 +102,6 @@
 /* Begin PBXFileReference section */
 		28533ABA2200B4170046F93A /* UserStats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserStats.swift; sourceTree = "<group>"; };
 		28533ABD2200B4400046F93A /* CrashGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrashGroup.swift; sourceTree = "<group>"; };
-		28533AC02200C7BC0046F93A /* FileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileManager.swift; sourceTree = "<group>"; };
 		"Commander::Commander::Product" /* Commander.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Commander.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		"Jobs::Jobs::Product" /* Jobs.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Jobs.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		OBJ_10 /* HockeyAppAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HockeyAppAPI.swift; sourceTree = "<group>"; };
@@ -180,14 +178,6 @@
 				28533ABD2200B4400046F93A /* CrashGroup.swift */,
 			);
 			path = Model;
-			sourceTree = "<group>";
-		};
-		28533ABF2200C7AA0046F93A /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				28533AC02200C7BC0046F93A /* FileManager.swift */,
-			);
-			path = Extensions;
 			sourceTree = "<group>";
 		};
 		OBJ_15 /* Tests */ = {
@@ -296,7 +286,6 @@
 			children = (
 				OBJ_9 /* API */,
 				28533ABC2200B4250046F93A /* Model */,
-				28533ABF2200C7AA0046F93A /* Extensions */,
 				OBJ_13 /* HockeyAppCrashDataFetcher.swift */,
 				OBJ_14 /* main.swift */,
 			);
@@ -534,7 +523,6 @@
 				28533ABE2200B4400046F93A /* CrashGroup.swift in Sources */,
 				OBJ_94 /* HockeyAppCrashDataFetcher.swift in Sources */,
 				OBJ_95 /* main.swift in Sources */,
-				28533AC12200C7BC0046F93A /* FileManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
