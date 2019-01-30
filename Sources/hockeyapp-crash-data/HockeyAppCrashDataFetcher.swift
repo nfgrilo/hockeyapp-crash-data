@@ -74,7 +74,7 @@ public final class HockeyAppCrashDataFetcher {
                     self.exportUserCrashGroupStatsToCSV(filename, stats: stats)
                 }
             } else {
-                print("No file to export to was specified.)
+                print("No file to export to was specified.")
             }
             
             print("##############################################")
