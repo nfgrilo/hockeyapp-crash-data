@@ -73,10 +73,8 @@ public final class HockeyAppCrashDataFetcher {
                 case .userCrashGroupStats:
                     self.exportUserCrashGroupStatsToCSV(filename, stats: stats)
                 }
-                
-                print("Data was exported to \(filename)")
             } else {
-                print("No file argument was specified => data was now exported")
+                print("No file to export to was specified.)
             }
             
             print("##############################################")
